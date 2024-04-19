@@ -7,12 +7,12 @@ const arroy = ["work", "play", "study", "exercise", "social", "self"];
 const currents = {};
 const previouses = {};
 
-for (let index = 0; index < arroy.length; index++) {
+for ( var index = 0; index < arroy.length; index++) {
   currents[arroy[index]] = document.querySelector(`#${arroy[index]}Current`);
   previouses[arroy[index]] = document.querySelector(`#${arroy[index]}Pre`);
 }
 
-for (let index = 0; index < 6; index++) {
+for (var index = 0; index < 6; index++) {
   currents[arroy[index]].textContent =
     x[index].timeframes.weekly.current + "Hrs";
   previouses[arroy[index]].textContent =
@@ -30,7 +30,7 @@ function tabing(e) {
     texto.forEach((element) => {
       element.textContent = "Yesterday";
     });
-    for (let index = 0; index < 6; index++) {
+    for (var index = 0; index < 6; index++) {
       currents[arroy[index]].textContent =
         x[index].timeframes.daily.current + "Hrs";
       previouses[arroy[index]].textContent =
@@ -42,7 +42,7 @@ function tabing(e) {
     texto.forEach((element) => {
       element.textContent = "Last Week";
     });
-    for (let index = 0; index < 6; index++) {
+    for (var index = 0; index < 6; index++) {
       currents[arroy[index]].textContent =
         x[index].timeframes.weekly.current + "Hrs";
       previouses[arroy[index]].textContent =
@@ -53,7 +53,7 @@ function tabing(e) {
     texto.forEach((element) => {
       element.textContent = "Last Month";
     });
-    for (let index = 0; index < 6; index++) {
+    for (var index = 0; index < 6; index++) {
       currents[arroy[index]].textContent =
         x[index].timeframes.monthly.current + "Hrs";
       previouses[arroy[index]].textContent =
